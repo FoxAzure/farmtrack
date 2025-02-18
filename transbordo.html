@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Transbordos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="atualizarResumo()">
+    <div class="background"></div>
+    <header>
+        <div class="header-content">
+            <img src="galery/farmtrackicon.png" alt="icone_farmtrakc" id="icone_farmtrakc">
+            <nav>
+                <a href="index.html" class="back-button">Ínicio</a>
+            </nav>
+            
+        </div>
+    </header>
+    <div class="container">
+        <div class="main">
+            <h2>Adicionar Transbordos</h2>
+            <form id="meuFormulario">
+                <label for="numero">Número Transbordo:</label>
+                <input type="text" id="numero" placeholder="Digite o número do transbordo">
+                <br>
+                <label for="variedade">Variedade:</label>
+                <select id="variedade"></select>
+                <br>
+                <label for="percentual">Percentual Preenchido:</label>
+                <input type="text" id="percentual" placeholder="Digite o percentual preenchido">
+                <br>
+                <label for="toneladas">Toneladas:</label>
+                <input type="text" id="toneladas" name="toneladas" placeholder="Digite a tonelada total">
+                <br>
+                <button type="button" onclick="adicionarTransbordo()">Adicionar Transbordo</button>
+            </form>
+            <textarea id="dados" rows="10" cols="50"></textarea>
+            <div>
+                <button onclick="copiarDados()">Copiar Dados</button>
+                <button onclick="limparDados()">Limpar Dados</button>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div id="historico"></div>
+            <button onclick="limparHistorico()">Limpar Tudo</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

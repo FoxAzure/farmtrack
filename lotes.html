@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Lotes Colhidos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="atualizarResumo()">
+    <div class="background"></div>
+    <header>
+        <div class="header-content">
+            <img src="galery/farmtrackicon.png" alt="icone_farmtrakc" id="icone_farmtrakc">
+            <nav>
+                <a href="index.html" class="back-button">Ínicio</a>
+            </nav>
+            
+        </div>
+    </header>
+    <div class="container">
+        
+        <div class="main">
+            <h2>Adicionar Lotes</h2>
+            <form id="meuFormulario">
+                <label for="campo">Campo:</label>
+                <select id="campo" required></select>
+                <br>
+                <label for="data">Data:</label>
+                <input type="date" id="data" required>
+                <br>
+                <label for="lote">Lote:</label>
+                <input type="text" id="lote" placeholder="Digite o lote">
+                <br>
+                <label for="area">Área Colhida:</label>
+                <input type="text" id="area" placeholder="Digite a área colhida">
+                <br>
+                <label for="restante">Restante:</label>
+                <input type="text" id="restante" placeholder="Digite o restante">
+                <br>
+                <label for="destino">Destino Semente:</label>
+                <select id="destino"></select>
+                <br>
+                <button type="button" onclick="adicionarLote()">Adicionar Valores</button>
+            </form>
+            <textarea id="dados" rows="10" cols="50"></textarea>
+            <div>
+                <button onclick="copiarDados()">Copiar Dados</button>
+                <button onclick="limparDados()">Limpar Dados</button>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div id="historico"></div>
+            <button onclick="limparHistorico()">Limpar Tudo</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+

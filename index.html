@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmTrack - Inicio</title>
+    <link rel="shortcut icon" href="galery/farmtrackicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="atualizarResumo()">
+    <div class="background"></div>
+    <header>
+        <div class="header-content">
+            <img src="galery/farmtrackicon.png" alt="icone_farmtrakc" id="icone_farmtrakc">
+            <h1>Plantio Mecanizado</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="main">
+            <div class="buttons">
+                <button onclick="location.href='lotes.html'">Adicionar Lotes Colhidos</button>
+                <button onclick="location.href='transbordo.html'">Adicionar Transbordos</button>
+                <button onclick="location.href='avaliacao.html'">Avaliações e Observações</button>
+            </div>
+    
+            <textarea id="dados" rows="10" cols="50"></textarea>
+            <div>
+                <button onclick="copiarDados()">Copiar Dados</button>
+                <button onclick="limparDados()">Limpar Dados</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+          <p>Desenvolvido por Paulo Roberto</p>
+          <p>&copy; 2025 Todos os direitos reservados.</p>
+          <div class="social-media">
+            <a href="https://www.linkedin.com/in/paulo-roberto-532708260/" target="_blank">LinkedIn</a>
+          </div>
+          <img src="galery/farmtracklogo.png" alt="logo_farmTrack" id="logo_farmTrack">
+        </div>
+      </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

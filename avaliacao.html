@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliações e Observações</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="atualizarResumo()">
+    <div class="background"></div>
+    <header>
+        <div class="header-content">
+            <img src="galery/farmtrackicon.png" alt="icone_farmtrakc" id="icone_farmtrakc">
+            <nav>
+                <a href="index.html" class="back-button">Ínicio</a>
+            </nav>
+            
+        </div>
+    </header>
+    <div class="container">
+        
+        <div class="main">
+            <h2>Avaliação/Observações</h2>
+            <form id="meuFormulario">
+                <fieldset>
+                    <legend>Facões</legend>
+                    <div>
+                        <input type="radio" id="facao_nova" name="facao" value="Novo">
+                        <label for="facao_nova">Novo</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="facao_conservado" name="facao" value="Conservado">
+                        <label for="facao_conservado">Conservado</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="facao_desgaste" name="facao" value="Inicio de Desgaste">
+                        <label for="facao_desgaste">Início de Desgaste</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="facao_desgastados" name="facao" value="Desgastados">
+                        <label for="facao_desgastados">Desgastados</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="facao_troca" name="facao" value="Troca/Manutenção">
+                        <label for="facao_troca">Troca/Manutenção</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                <legend>Faquinhas</legend>
+                    <div>
+                        <input type="radio" id="faquinha_nova" name="faquinha" value="Novas">
+                        <label for="faquinha_nova">Novas</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="faquinha_conservado" name="faquinha" value="Conservado">
+                        <label for="faquinha_conservado">Conservado</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="faquinha_desgaste" name="faquinha" value="Inicio de Desgaste">
+                        <label for="faquinha_desgaste">Início de Desgaste</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="faquinha_desgastados" name="faquinha" value="Desgastados">
+                        <label for="faquinha_desgastados">Desgastados</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="faquinha_troca" name="faquinha" value="Troca/Manutenção">
+                        <label for="faquinha_troca">Troca/Manutenção</label>
+                    </div>
+                </fieldset>
+                <label for="pressao_picador">Pressão do Picador:</label>
+                <input type="text" id="pressao_picador" placeholder="Digite a pressão do picador">
+                <br>
+                <label for="pressao_corte_base">Pressão do Corte de Base:</label>
+                <input type="text" id="pressao_corte_base" placeholder="Digite a pressão do corte de base">
+                <br>
+                <label for="lavagem">Lavagem da Colheita:</label>
+                <select id="lavagem">
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                </select>
+                <br>
+                <label for="observacao">Observação:</label>
+                <input type="text" id="observacao" placeholder="Digite suas observações">
+                <br>
+                <button type="button" onclick="adicionarAvaliacao()">Adicionar Avaliação</button>
+            </form>
+            <textarea id="dados" rows="10" cols="50"></textarea>
+            <div>
+                <button onclick="copiarDados()">Copiar Dados</button>
+                <button onclick="limparDados()">Limpar Dados</button>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div id="historico"></div>
+            <button onclick="limparHistorico()">Limpar Tudo</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
